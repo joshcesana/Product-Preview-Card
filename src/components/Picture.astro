@@ -5,21 +5,21 @@ const { mobileImageUrl, desktopImageUrl } = Astro.props
 
 const mobileImg = await getImage({
     src: mobileImageUrl,
-    format: "webp",
+    format: "avif",
     width: 343,
     height: 240,
 })
 
 const desktopImg = await getImage({
     src: desktopImageUrl,
-    format: "webp",
+    format: "avif",
     width: 300,
     height: 452,
 })
 ---
 
-<picture>
+<picture class="h-full">
     <source media="(max-width: 767px)" srcset={mobileImg.src} />
     <source media="(min-width: 768)" srcset={desktopImg.src} />
-    <img src={desktopImg.src} alt="Gabrielle Essence Eau De Parfum" class="h-auto w-full object-cover" />
+    <img src={desktopImg.src} alt="Gabrielle Essence Eau De Parfum" class="h-full w-full object-cover" />
 </picture>
