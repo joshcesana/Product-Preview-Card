@@ -14,7 +14,7 @@
         font-family: "Fraunces";
         font-optical-sizing: auto;
         font-weight: 700;
-        font-display: block;
+        font-display: swap;
         src: url(/fonts/Fraunces-VariableFont.woff2) format("woff2-variations");
         font-variation-settings: "SOFT" 0, "WONK" 0;
     }
