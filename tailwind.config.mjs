@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 export default {
     content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
     theme: {
@@ -11,8 +14,8 @@ export default {
                 "gray-blue": "#6c7289",
             },
             fontFamily: {
-                montserrat: ["Montserrat", "sans-serif"],
-                fraunces: ["Fraunces", "serif"],
+                montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
+                fraunces: ["Fraunces", ...defaultTheme.fontFamily.sans],
             },
         },
     },
