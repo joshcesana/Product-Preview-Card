@@ -3,23 +3,39 @@ import { getImage } from "astro:assets"
 
 const { mobileImageUrl, desktopImageUrl } = Astro.props
 
-const mobileImg = await getImage({
+const mobileAvifImg = await getImage({
     src: mobileImageUrl,
     format: "avif",
     width: 343,
     height: 240,
 })
 
-const desktopImg = await getImage({
+const mobileJpegImg = await getImage({
+    src: mobileImageUrl,
+    format: "jpeg",
+    width: 343,
+    height: 240,
+})
+
+const desktopAvifImg = await getImage({
     src: desktopImageUrl,
     format: "avif",
+    width: 300,
+    height: 452,
+})
+
+const desktopJpegImg = await getImage({
+    src: desktopImageUrl,
+    format: "jpeg",
     width: 300,
     height: 452,
 })
 ---
 
 <picture class="h-full">
-    <source media="(max-width: 767px)" srcset={mobileImg.src} />
-    <source media="(min-width: 768)" srcset={desktopImg.src} />
-    <img src={desktopImg.src} alt="Gabrielle Essence Eau De Parfum" class="h-full w-full object-cover" />
+    <source media="(max-width: 767px)" srcset={mobileAvifImg.src} />
+    <source media="(max-width: 767px)" srcset={mobileJpegImg.src} />
+    <source media="(min-width: 768px)" srcset={desktopAvifImg.src} />
+    <source media="(min-width: 768px)" srcset={desktopJpegImg.src} />
+    <img src={desktopAvifImg.src} alt="Gabrielle Essence Eau De Parfum" class="h-full w-full object-cover" />
 </picture>
