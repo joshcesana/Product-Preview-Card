@@ -1,0 +1,25 @@
+---
+import { getImage } from "astro:assets"
+
+const { mobileImageUrl, desktopImageUrl } = Astro.props
+
+const mobileImg = await getImage({
+    src: mobileImageUrl,
+    format: "webp",
+    width: 343,
+    height: 240,
+})
+
+const desktopImg = await getImage({
+    src: desktopImageUrl,
+    format: "webp",
+    width: 300,
+    height: 452,
+})
+---
+
+<picture>
+    <source media="(max-width: 767px)" srcset={mobileImg.src} />
+    <source media="(min-width: 768)" srcset={desktopImg.src} />
+    <img src={desktopImg.src} alt="Gabrielle Essence Eau De Parfum" class="h-auto w-full object-cover" />
+</picture>

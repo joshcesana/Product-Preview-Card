@@ -1,0 +1,41 @@
+---
+import ProductDesktopImage from "../images/image-product-desktop.jpg"
+import ProductMobileImage from "../images/image-product-mobile.jpg"
+import Picture from "../components/Picture.astro"
+---
+
+<div class="flex max-w-[21.438rem] flex-col overflow-hidden rounded-lg bg-white md:max-w-[37.5rem] md:flex-row">
+    <!-- Image Section -->
+    <div class="md:w-1/2">
+        <!-- <Picture
+            src={ProductDesktopImage}
+            formats={["avif", "webp"]}
+            width={768}
+            alt="Image of Gabrielle Essence Eau De Parfum"
+        >
+            <Image src={ProductMobileImage} alt="Image of Gabrielle Essence Eau De Parfum" />
+        </Picture>         -->
+        <!-- <Image src={ProductDesktopImage} alt="Gabrielle Essence Eau De Parfum" class="hidden h-full w-full object-cover md:block" />
+        <Image src={ProductMobileImage} alt="Gabrielle Essence Eau De Parfum" class="h-auto w-full object-cover md:hidden" /> -->
+        <Picture mobileImageUrl={ProductMobileImage} desktopImageUrl={ProductDesktopImage} />
+    </div>
+
+    <!-- Content Section -->
+    <div class="p-6 md:w-1/2 md:p-8">
+        <h2 class="mb-3 text-xs font-medium uppercase tracking-[0.3125em] text-gray-blue">Perfume</h2>
+        <h1 class="mb-4 font-fraunces text-[2rem] font-bold leading-8 text-dark-blue md:text-3xl">Gabrielle Essence Eau De Parfum</h1>
+        <p class="text-dark-gray-blue mb-6 font-montserrat text-sm font-medium leading-[1.4375rem] text-gray-blue">
+            A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="mb-5 flex items-center">
+            <span class="font-fraunces text-[2rem] font-bold text-dark-cyan">$149.99</span>
+            <span class="text-dark-gray-blue ml-4 font-montserrat text-[0.8125rem] text-gray-blue line-through"> $169.99 </span>
+        </div>
+        <button
+            class="flex w-full items-center justify-center rounded-lg bg-dark-cyan py-4 text-sm font-bold text-white hover:bg-very-dark-cyan"
+        >
+            <img src="/src/images/icon-cart.svg" alt="Shopping cart icon" class="pr-3"/>
+            Add to Cart
+        </button>
+    </div>
+</div>
