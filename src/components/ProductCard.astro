@@ -4,7 +4,7 @@ import ProductMobileImage from "../images/image-product-mobile.jpg"
 import { Image } from "astro:assets"
 ---
 
-<div class="flex max-w-[21.438rem] flex-col overflow-hidden rounded-lg bg-white md:max-w-[37.5rem] md:flex-row">
+<div class="flex max-w-[21.438rem] flex-col overflow-hidden rounded-xl bg-white md:max-w-[37.5rem] md:flex-row">
     <!-- Image Section -->
     <div class="md:w-1/2">
         <Image src={ProductDesktopImage} width="300" height="452" format="avif" loading="eager" alt="Gabrielle Essence Eau De Parfum" class="hidden h-full w-full object-cover md:block" />
@@ -14,7 +14,7 @@ import { Image } from "astro:assets"
     <!-- Content Section -->
     <div class="p-6 md:w-1/2 md:p-8">
         <h2 class="mb-3 text-xs font-medium uppercase tracking-[0.3125em] text-gray-blue">Perfume</h2>
-        <h1 class="mb-4 font-fraunces text-[2rem] font-bold leading-8 text-dark-blue md:text-3xl">Gabrielle Essence Eau De Parfum</h1>
+        <h1 class="mb-4 text-balance font-fraunces text-[2rem] font-bold leading-8 text-dark-blue md:text-3xl md:leading-8">Gabrielle Essence Eau De Parfum</h1>
         <p class="text-dark-gray-blue mb-6 font-montserrat text-sm font-medium leading-[1.4375rem] text-gray-blue">
             A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
         </p>
@@ -23,7 +23,7 @@ import { Image } from "astro:assets"
             <span class="text-dark-gray-blue ml-4 font-montserrat text-[0.8125rem] text-gray-blue line-through"> $169.99 </span>
         </div>
         <button
-            class="flex w-full items-center justify-center rounded-lg bg-dark-cyan py-4 text-sm font-bold text-white hover:bg-very-dark-cyan"
+            class="flex w-full items-center justify-center rounded-lg bg-dark-cyan py-3.5 text-sm font-bold text-white hover:bg-very-dark-cyan"
         >
             <img src="/icon-cart.svg" width="27" height="16" alt="Shopping cart icon" class="pr-3"/>
             Add to Cart
