@@ -1,7 +1,7 @@
 ---
 import ProductDesktopImage from "../images/image-product-desktop.jpg"
 import ProductMobileImage from "../images/image-product-mobile.jpg"
-import Picture from "../components/Picture.astro"
+import { Image } from "astro:assets"
 ---
 
 <div class="flex max-w-[21.438rem] flex-col overflow-hidden rounded-lg bg-white md:max-w-[37.5rem] md:flex-row">
@@ -15,9 +15,9 @@ import Picture from "../components/Picture.astro"
         >
             <Image src={ProductMobileImage} alt="Image of Gabrielle Essence Eau De Parfum" />
         </Picture>         -->
-        <!-- <Image src={ProductDesktopImage} alt="Gabrielle Essence Eau De Parfum" class="hidden h-full w-full object-cover md:block" />
-        <Image src={ProductMobileImage} alt="Gabrielle Essence Eau De Parfum" class="h-auto w-full object-cover md:hidden" /> -->
-        <Picture mobileImageUrl={ProductMobileImage} desktopImageUrl={ProductDesktopImage} />
+        <Image src={ProductDesktopImage} alt="Gabrielle Essence Eau De Parfum" class="hidden h-full w-full object-cover md:block" />
+        <Image src={ProductMobileImage} alt="Gabrielle Essence Eau De Parfum" class="h-auto w-full object-cover md:hidden" />
+        <!-- <Picture mobileImageUrl={ProductMobileImage} desktopImageUrl={ProductDesktopImage} /> -->
     </div>
 
     <!-- Content Section -->
